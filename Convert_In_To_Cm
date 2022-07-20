@@ -1,0 +1,62 @@
+import java.util.Scanner;
+public class inches_cm 
+{
+	    public static void main(String[] args) 
+	    {
+	     
+         int number;
+         int number2;
+         int largest;
+         int smallest;
+         String again;
+         double centimeters = 0;
+         int inches = 0;
+         Scanner input = new Scanner(System.in);
+         Scanner strInput = new Scanner(System.in);
+
+	     do 
+	       {
+	          System.out.println("Enter 2 numbers: ");
+	          number = input.nextInt ();
+	          number2 = input.nextInt();
+	          
+	            largest = number;
+	            smallest = number2;
+	            
+	            System.out.println(largest);
+	            System.out.println(smallest);
+	            
+	            for(int i = 1; i < 2; i++)
+	            {    
+	                if (number > number2)
+	                {
+	                    largest = number;
+	                    smallest = number2;
+	                }
+	                else if (number < number2)
+	                {
+	                    smallest = number;
+	                    largest = number2;
+	                }
+	                System.out.println("Inches******Centimeters ");
+	                System.out.println("***********************");
+	                
+	                while (inches < largest)
+	                {
+	                    centimeters = smallest*2.54;
+	                    inches = smallest;
+	            
+	                 System.out.println(inches+"     "+        "        "+centimeters);
+	               
+	                    smallest = 6 + smallest ;
+	                }    
+	            }   
+	            System.out.println("Would you like to enter new numbers?");
+	            again = strInput.nextLine();	      
+	            
+	       }while (again.equalsIgnoreCase("yes"));
+	     
+	        System.out.println("Thank you for using my program.");
+	     
+	    }	           
+}
